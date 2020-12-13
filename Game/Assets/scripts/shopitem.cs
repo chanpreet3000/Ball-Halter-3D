@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
+using System.Collections.Generic;
 
 public class shopitem : MonoBehaviour
 {
