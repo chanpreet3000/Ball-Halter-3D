@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class shopitem : MonoBehaviour
 {
@@ -67,6 +68,10 @@ public class shopitem : MonoBehaviour
     }    
     public void purchasebtnclicked()
     {
+        Analytics.CustomEvent("ShopItem", new Dictionary<string, object>
+        {
+            { "name", itemname}
+        });
         PlayerPrefs.SetInt("diamonds", PlayerPrefs.GetInt("diamonds", 0) - itemprice);
         PlayerPrefs.SetInt(itemname, 1);
     }
