@@ -5,6 +5,7 @@ using UnityEngine;
 public class endplatformscript : MonoBehaviour
 {
     public int currentlevelno = 0;
+    public GameObject confetti;
     private GameManager gm;
     public void Awake()
     {
@@ -17,6 +18,7 @@ public class endplatformscript : MonoBehaviour
         {
             print("You won level complete");
             gm.win(currentlevelno);
+            confetti.SetActive(true);
         }
     }
 }

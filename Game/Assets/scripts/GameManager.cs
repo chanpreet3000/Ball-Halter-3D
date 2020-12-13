@@ -61,17 +61,21 @@ public class GameManager : MonoBehaviour
     public void win(int levelno)
     {
         currentlevelno = levelno;
-        winningscreen.SetActive(true);
         winningscreenleveltext.text = "Level " + levelno + " Completed!!";
         if (currentlevelno >= PlayerPrefs.GetInt("MaxLevel", 1))
         {
             PlayerPrefs.SetInt("MaxLevel", currentlevelno + 1);
         }
+        Invoke("activatewinningscreen", 2.5f);
         Analytics.CustomEvent("LevelWin", new Dictionary<string, object>
         {
             { "Level", currentlevelno},
             { "timetakentoomplete", Time.timeSinceLevelLoad }
         });
+    }
+    public void activatewinningscreen()
+    {
+        winningscreen.SetActive(true);
     }
 
     public void winningscreennextlevelbtn()
