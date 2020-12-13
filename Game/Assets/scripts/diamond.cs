@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class diamond : MonoBehaviour
@@ -33,6 +34,7 @@ public class diamond : MonoBehaviour
         {
             PlayerPrefs.SetInt("diamondnumber" + SceneManager.GetActiveScene().name, 1);
             PlayerPrefs.SetInt("diamonds", PlayerPrefs.GetInt("diamonds", 0) + amount);
+            Analytics.CustomEvent("DiamondsTaken");
         }      
     }
 }

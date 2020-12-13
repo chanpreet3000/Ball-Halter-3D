@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
+using System;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,6 +45,10 @@ public class GameManager : MonoBehaviour
     public void restartfromcheckpoint()
     {
         isdead = false;
+        Analytics.CustomEvent("LevelDied", new Dictionary<string, object>
+        {
+            { "Level", currentlevelno}
+        });
         Player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         Player.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -60,6 +67,11 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("MaxLevel", currentlevelno + 1);
         }
+        Analytics.CustomEvent("LevelWin", new Dictionary<string, object>
+        {
+            { "Level", currentlevelno},
+            { "timetakentoomplete", Time.timeSinceLevelLoad }
+        });
     }
 
     public void winningscreennextlevelbtn()
