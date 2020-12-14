@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 2054596981788342891}
   - component: {fileID: 2054596981788342894}
   - component: {fileID: 2054596981788342895}
+  - component: {fileID: 49894835}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -717,6 +718,14 @@ MonoBehaviour:
   torquemultiplier: 25
   maxvelocity: 600
   checkpoint: {x: 0, y: 0, z: 0}
+--- !u!81 &49894835
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054596981788342888}
+  m_Enabled: 1
 --- !u!1 &3625974134148498959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2569,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8641113440398654703}
   - component: {fileID: 8641113440398654696}
-  - component: {fileID: 8641113440398654697}
   - component: {fileID: 528084015713179530}
   - component: {fileID: 725218437788929493}
   m_Layer: 0
@@ -2627,14 +2635,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8641113440398654697
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641113440398654698}
-  m_Enabled: 1
 --- !u!114 &528084015713179530
 MonoBehaviour:
   m_ObjectHideFlags: 0

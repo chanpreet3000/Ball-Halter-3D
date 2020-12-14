@@ -19,6 +19,7 @@ public class endplatformscript : MonoBehaviour
             print("You won level complete");
             gm.win(currentlevelno);
             confetti.SetActive(true);
+            FindObjectOfType<audiomanager>().playaudio("win");
         }
     }
 }

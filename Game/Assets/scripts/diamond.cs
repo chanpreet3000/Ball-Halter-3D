@@ -35,6 +35,7 @@ public class diamond : MonoBehaviour
             PlayerPrefs.SetInt("diamondnumber" + SceneManager.GetActiveScene().name, 1);
             PlayerPrefs.SetInt("diamonds", PlayerPrefs.GetInt("diamonds", 0) + amount);
             Analytics.CustomEvent("DiamondsTaken");
+            FindObjectOfType<audiomanager>().playaudio("diamond");
         }      
     }
 }

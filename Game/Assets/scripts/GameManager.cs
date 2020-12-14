@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isdead)
         {
+            FindObjectOfType<audiomanager>().playaudio("death");
             isdead = true;
             Instantiate(deathparticle, Player.transform.position + Vector3.up,Quaternion.identity);
             Invoke("restartfromcheckpoint", 1.4f);

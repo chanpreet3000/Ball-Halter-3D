@@ -7,6 +7,7 @@ public class treetrunk : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            FindObjectOfType<audiomanager>().playaudio("treecrack");            
             tree.GetComponent<Animator>().SetTrigger("Trigger");
         }
     }

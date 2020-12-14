@@ -11,6 +11,7 @@ public class powerjump : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.GetComponent<Rigidbody>().AddForce(force * v,ForceMode.Impulse);
+            FindObjectOfType<audiomanager>().playaudio("spring");
         }
     }
 }
