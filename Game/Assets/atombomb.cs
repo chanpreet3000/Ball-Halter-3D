@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class atombomb : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject particles;
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        particles.SetActive(true);
+        Destroy(gameObject, 3f);
     }
 }
