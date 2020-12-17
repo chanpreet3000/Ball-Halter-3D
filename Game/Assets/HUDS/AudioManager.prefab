@@ -46,14 +46,14 @@ MonoBehaviour:
   sounds:
   - name: wind
     clip: {fileID: 8300000, guid: fed42e81dfa96474785677e930b63c1e, type: 3}
-    volume: 0.4
+    volume: 0.2
     pitch: 1
     loop: 1
     playonstart: 1
     source: {fileID: 0}
   - name: checkpoint
     clip: {fileID: 8300000, guid: 2ae968f068650304986167975eb2a670, type: 3}
-    volume: 1
+    volume: 0.6
     pitch: 1
     loop: 0
     playonstart: 0
@@ -88,7 +88,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: death
     clip: {fileID: 8300000, guid: 5ed921f62d4a45b4bb4a7dd2a62a3421, type: 3}
-    volume: 0.1
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    playonstart: 0
+    source: {fileID: 0}
+  - name: whoosh
+    clip: {fileID: 8300000, guid: 5687edba0516c03499b64952cd40fe29, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 0
     playonstart: 0

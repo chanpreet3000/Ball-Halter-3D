@@ -7,25 +7,29 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject AM;
     public GameObject winningscreen,deathparticle;
     public Text winningscreenleveltext, leveltext;
 
-    private GameObject Player;        
-    private bool isdead=false;
-    public int currentlevelno=0;
+    private GameObject Player;
+    [HideInInspector]public int currentlevelno=0;
 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         leveltext.text = PlayerPrefs.GetInt("MaxLevel", 1).ToString("0");
         leveltext.text = currentlevelno.ToString();
+        if(FindObjectOfType<audiomanager>()==null)
+        {
+            GameObject g=Instantiate(AM, transform.position , Quaternion.identity);
+        }
     }
     public void Die()
     {
-        if (!isdead)
+        if (!Player.GetComponent<Playermovement>().isdead)
         {
             FindObjectOfType<audiomanager>().playaudio("death");
-            isdead = true;
+            Player.GetComponent<Playermovement>().isdead = true;
             Instantiate(deathparticle, Player.transform.position + Vector3.up,Quaternion.identity);
             Invoke("restartfromcheckpoint", 1.4f);
         }
@@ -45,7 +49,6 @@ public class GameManager : MonoBehaviour
     }
     public void restartfromcheckpoint()
     {
-        isdead = false;
         Analytics.CustomEvent("LevelDied", new Dictionary<string, object>
         {
             { "Level", currentlevelno}
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
         Player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         Player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         Player.transform.rotation = Quaternion.Euler(0, 0, 0);
-        Player.transform.position = Player.GetComponent<Playermovement>().checkpoint;
+        Player.transform.position = Player.GetComponent<Playermovement>().checkpoint;        
     }
     public void openlevel(int i)
     {
@@ -70,8 +73,7 @@ public class GameManager : MonoBehaviour
         Invoke("activatewinningscreen", 2.5f);
         Analytics.CustomEvent("LevelWin", new Dictionary<string, object>
         {
-            { "Level", currentlevelno},
-            { "timetakentoomplete", Time.timeSinceLevelLoad }
+            { "Level", currentlevelno}
         });
     }
     public void activatewinningscreen()

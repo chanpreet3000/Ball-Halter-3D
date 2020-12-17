@@ -7,6 +7,7 @@ public class Playermovement : MonoBehaviour
     public Joystick joystick;
     public float torquemultiplier = 25f,maxvelocity=600f;
     private Rigidbody Rb;
+    [HideInInspector] public bool isdead = false;
     public Vector3 checkpoint = Vector3.zero;
     // Start is called before the first frame update
     void Start()
@@ -30,5 +31,5 @@ public class Playermovement : MonoBehaviour
     public void clampingvelocity()
     {
         Rb.velocity = new Vector3(Mathf.Clamp(Rb.velocity.x, -maxvelocity, maxvelocity), Rb.velocity.y, Mathf.Clamp(Rb.velocity.z, -maxvelocity, maxvelocity));
-    }
+    }   
 }

@@ -32,6 +32,16 @@ public class cameramovement : MonoBehaviour
                 localtime = 0f;
             }
         }
+        if(Player.GetComponent<Playermovement>().isdead)
+        {
+            transform.position = Vector3.Lerp(transform.position, Player.GetComponent<Playermovement>().checkpoint, localtime);
+            localtime += Time.deltaTime*1/1.42f;
+            if (localtime >= 1f)
+            {
+                Player.GetComponent<Playermovement>().isdead = false;
+                localtime = 0f;
+            }
+        }
     }
     public void rotatecamera(int i)
     {
