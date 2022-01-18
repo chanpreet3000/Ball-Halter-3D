@@ -1,12 +1,12 @@
 ### **Ball Halter 3D**
 
-**Ball Halter 3D is an android games full of challenges developed using Unity 3d with 20 exciting and difficult to beat levels.**
+**Ball Halter 3D is an android game full of challenges developed using Unity 3d with 20 exciting and difficult-to-beat levels.**
 
 ### **# Features**
 
-1. Game has credit System implement and has an item shop.
-2. Item Shop can be used to purchase skins for the ball.
-3. Credits/ Diamonds can be collected by completing levels, in game diamond pick-ups or by watching a reward unity ad.
+1. Game has a credit System implemented and has an item shop.
+2. Item Shop where you can purchase skins for the ball.
+3. Diamonds can be collected by completing levels, in-game diamond pick-ups, or by watching a reward unity ad.
 4. Game records all the records of the player level deaths and the time spent average time spent to complete a level.
 5. Game has more than 20 different obstacles in 20 different levels to make the game a bit challenging.
 6. Game has several pick-ups with had unique visual effects for the player to see the world.
@@ -19,7 +19,7 @@ Google Play Store: - https://play.google.com/store/apps/details?id=com.Channi.Ba
 
 ### **# Next Updates**
 
-1. Optimisations to the game to make is feel smooth and work on many more devices without any issues.
+1. Optimise the game to make it feel smooth and work on many more devices without any issues.
 2. More levels to be added.
 
 
@@ -30,12 +30,12 @@ Google Play Store: - https://play.google.com/store/apps/details?id=com.Channi.Ba
 ![mainmenu](https://user-images.githubusercontent.com/66767005/149937066-e8a5c36d-7d16-4f02-9cb7-4329c40dc761.jpg)
 
 
-**2. Item Shop with 6 different Skins fo the ball.**
+**2. Item Shop with 6 different Skins for the ball.**
 
 ![ItemShop](https://user-images.githubusercontent.com/66767005/149937149-dbc46183-574f-4a00-94bf-3a4cc47fda6b.jpg)
 
 
-**3. Item Shop with 6 different Skins fo the ball.**
+**3. Item Shop with 6 different Skins for the ball.**
 
 ![settings](https://user-images.githubusercontent.com/66767005/149937276-4cd6561a-0e69-4912-bfbe-9f75f351cd56.jpg)
 
