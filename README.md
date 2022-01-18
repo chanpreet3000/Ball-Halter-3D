@@ -1,5 +1,4 @@
-#Ball Halter 3D
-### **#Ball Halter 3D*
+### **Ball Halter 3D**
 
 **Ball Halter 3D is an android games full of challenges developed using Unity 3d with 20 exciting and difficult to beat levels.**
 
