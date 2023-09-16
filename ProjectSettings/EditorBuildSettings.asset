@@ -6,39 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: 046bf9e063e919a47be90d530cdd4d5d
   - enabled: 1
-    path: Assets/Scenes/level0.unity
-    guid: 16e7a41be9e9a304a89a873ed6e9c68d
+    path: Assets/Scenes/Training.unity
+    guid: 62dfbbe2d9fab284db38e02cf4d0d85e
   - enabled: 1
-    path: Assets/Scenes/level1.unity
-    guid: 150371fb0fefe014e8b3a445b3d8b05b
+    path: Assets/Scenes/Level 1.unity
+    guid: 5ddc63b969aca4640beac9bc695899ba
   - enabled: 1
-    path: Assets/Scenes/level2.unity
-    guid: 49215bf542fe0e24f8fcef42b4ee236b
+    path: Assets/Scenes/Level 2.unity
+    guid: 5c1ce77646d90154292256299c20e2a1
   - enabled: 1
-    path: Assets/Scenes/level3.unity
-    guid: 27656c3d0a419bc40983d7111230882f
+    path: Assets/Scenes/Level 3.unity
+    guid: ab2885d5f534f94488627dbe360b8ba0
   - enabled: 1
-    path: Assets/Scenes/level4.unity
-    guid: 63c4ac370760f4d48a8b762c85479bae
+    path: Assets/Scenes/Level 4.unity
+    guid: f90aaa64e08116b478a525952f153c89
   - enabled: 1
-    path: Assets/Scenes/level5.unity
-    guid: 857928f5dedf13349a5be5afb4fc4096
+    path: Assets/Scenes/Level 5.unity
+    guid: 991a3392b974fdc43aa8d21123d5efff
   - enabled: 1
-    path: Assets/Scenes/level6.unity
-    guid: 1e53d0f3e589033458ee8673bd234095
+    path: Assets/Scenes/Level 6.unity
+    guid: 7f2fdb080c31f4141a30b39be6b995dd
   - enabled: 1
-    path: Assets/Scenes/level7.unity
-    guid: 6885de6af2a1e3a46b975afbff9fb466
+    path: Assets/Scenes/Level 7.unity
+    guid: b93a977fa6330ff41ab084304542a365
   - enabled: 1
-    path: Assets/Scenes/level8.unity
-    guid: df937ee4ffb40cd4d9c6b5db9b308920
+    path: Assets/Scenes/Level 8.unity
+    guid: b9cbfcd60ccc26b4b96917e315163c93
   - enabled: 1
-    path: Assets/Scenes/level9.unity
-    guid: f8b7f9464996baa4ba4ef67f6c30bcbe
+    path: Assets/Scenes/Level 9.unity
+    guid: ecd74da721ed22f4593ee55f81fb6db6
   - enabled: 1
-    path: Assets/Scenes/level10.unity
-    guid: 54755d24542576744a6554c254b3af91
-  m_configObjects: {}
+    path: Assets/Scenes/Level 10.unity
+    guid: cd0f8ff548ea1d64aa2313de687e9420
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 20a160822dc586f4280968429aea263b,
+      type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 57f19a737284e6547b341b5594f84533, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 8568334e6ae6d6c43bd9eaffe9d26d08, type: 2}

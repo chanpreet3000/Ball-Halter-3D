@@ -1,11 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class trap : MonoBehaviour
+public class Trap : MonoBehaviour
 {
-    public void playaudio()
+    [SerializeField] private Animator animator;
+    private void OnTriggerEnter(Collider other)
     {
-        GetComponent<AudioSource>().Play();
+        if (!other.CompareTag("Player")) return;
+
+        animator.SetBool("ActivateTrap", true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        animator.SetBool("ActivateTrap", false);
+    }
+    public void Playaudio()
+    {
+        AudioManager.Instance.PlayAudio(Sound.Trap);
     }
 }

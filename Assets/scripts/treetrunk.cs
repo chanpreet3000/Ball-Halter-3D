@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-public class treetrunk : MonoBehaviour
+public class TreeTrunk : MonoBehaviour
 {
-    [SerializeField] private GameObject tree;
+    [SerializeField] private Animator animator;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            FindObjectOfType<audiomanager>().playaudio("treecrack");            
-            tree.GetComponent<Animator>().SetTrigger("Trigger");
+            AudioManager.Instance.PlayAudio(Sound.TreeCrack);
+            animator.SetTrigger("Trigger");
         }
     }
 }

@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class powerjump : MonoBehaviour
+public class PowerJump : MonoBehaviour
 {
-    public float force = 14f;
-    public Vector3 v = new Vector3(0,1,0);
+    [SerializeField] private float force = 14f;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
-        {
-            other.GetComponent<Rigidbody>().AddForce(force * v,ForceMode.Impulse);
-            FindObjectOfType<audiomanager>().playaudio("spring");
-        }
+        if (!other.CompareTag("Player")) return;
+
+        other.GetComponent<Rigidbody>().AddForce(force * transform.up, ForceMode.Impulse);
+        AudioManager.Instance.PlayAudio(Sound.PowerJump);
     }
 }

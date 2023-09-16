@@ -1,18 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AtomicBombSpawner : MonoBehaviour
 {
-    public GameObject atombomb;
+    [SerializeField] private GameObject atomBombPrefab;
+    [SerializeField] private float timeInterval = 4f;
+    [SerializeField] private float explosionForce = 4f;
+    [SerializeField] private float explosionRadius = 4f;
+
     private void Start()
     {
-        Invoke("Deploy", 4f);
+        Deploy();
     }
 
-    public void Deploy()
+    private void Deploy()
     {
-        Instantiate(atombomb, transform);
-        Invoke("Deploy", 4f);
+        GameObject obj = Instantiate(atomBombPrefab, transform.position, Quaternion.identity);
+        AtomBomb atomBomb = obj.GetComponent<AtomBomb>();
+        atomBomb.SetExplosionForce(explosionForce);
+        atomBomb.SetExplosionRadius(explosionRadius);
+
+        Invoke("Deploy", timeInterval);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }

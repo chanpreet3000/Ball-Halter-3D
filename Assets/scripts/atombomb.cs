@@ -1,32 +1,38 @@
 ﻿using UnityEngine;
 
-public class atombomb : MonoBehaviour
+public class AtomBomb : MonoBehaviour
 {
-    public GameObject particles;
-    public float explosionforce=8f;
-
+    [SerializeField] private GameObject explosionParticle;
+    private float explosionForce;
+    private float explosionRadius = 4f;
     private bool used = false;
+    public void SetExplosionForce(float explosionForce)
+    {
+        this.explosionForce = explosionForce;
+    }
+    public void SetExplosionRadius(float explosionRadius)
+    {
+        this.explosionRadius = explosionRadius;
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        if (!used)
+        if (used) return;
+        used = true;
+        GameObject particleObject = Instantiate(explosionParticle, transform.position, Quaternion.identity);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
+        foreach (Collider obj in colliders)
         {
-            used = true;
-            GameObject p = Instantiate(particles, transform);
-            p.transform.parent = transform.parent;
-            Destroy(p, 3f);
-            Destroy(gameObject);
-
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 3f);
-
-            foreach (Collider s in colliders)
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                Rigidbody rb = s.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.AddExplosionForce(explosionforce, transform.position, 4f, explosionforce, ForceMode.Impulse);
-                }
+                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionForce, ForceMode.Impulse);
             }
         }
+
+        Destroy(particleObject, 3f);
+        Destroy(gameObject);
     }
-    
+
 }

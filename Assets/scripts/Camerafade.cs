@@ -15,13 +15,6 @@ public class Camerafade : MonoBehaviour
         _alpha = 1;
         _time = 0;
     }
-
-    [RuntimeInitializeOnLoadMethod]
-    public void RedoFade()
-    {
-        Reset();
-    }
-
     public void OnGUI()
     {
         if (_done) return;
