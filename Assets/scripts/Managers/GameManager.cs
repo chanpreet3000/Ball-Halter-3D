@@ -48,19 +48,12 @@ public class GameManager : MonoBehaviour
         totalDeaths++;
         FindObjectOfType<CameraMovement>().enabled = false;
 
-        StartCoroutine(PlayerDeadHelper());
-    }
-    IEnumerator PlayerDeadHelper()
-    {
-        yield return new WaitForSeconds(0.4f);
         GameObject player = FindObjectOfType<PlayerMovement>().gameObject;
         player.transform.position = GetCheckpoint();
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         FindObjectOfType<CameraMovement>().enabled = true;
-        yield return 0;
     }
-
     public void PlayerWin()
     {
         if (levelCompleted) return;
