@@ -27,7 +27,7 @@ public class AtomBomb : MonoBehaviour
             Rigidbody rb = obj.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionForce, ForceMode.Impulse);
+                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
             }
         }
 

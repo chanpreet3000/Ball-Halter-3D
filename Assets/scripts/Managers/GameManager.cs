@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,16 +11,23 @@ public class GameManager : MonoBehaviour
     private bool levelCompleted = false;
     private PlayerUIManager playerUIManager;
 
+    private float startTime;
+    private float completedAtTime;
+    private int totalDeaths;
+
     private void Awake()
     {
         QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = 144;
         Instance = this;
         lastCheckPoint = playerStartPosition;
+        startTime = Time.time;
+        totalDeaths = 0;
     }
 
     private void Start()
     {
+        Time.timeScale = 1;
         GameObject player = Instantiate(playerPrefab, playerStartPosition, Quaternion.identity);
         playerUIManager = player.GetComponentInChildren<PlayerUIManager>();
         PlayerUIManager.Instance.loadingScreen.SetActive(true);
@@ -37,10 +45,20 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerDead()
     {
+        totalDeaths++;
+        FindObjectOfType<CameraMovement>().enabled = false;
+
+        StartCoroutine(PlayerDeadHelper());
+    }
+    IEnumerator PlayerDeadHelper()
+    {
+        yield return new WaitForSeconds(0.4f);
         GameObject player = FindObjectOfType<PlayerMovement>().gameObject;
         player.transform.position = GetCheckpoint();
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        FindObjectOfType<CameraMovement>().enabled = true;
+        yield return 0;
     }
 
     public void PlayerWin()
@@ -48,7 +66,8 @@ public class GameManager : MonoBehaviour
         if (levelCompleted) return;
         Debug.Log("Player has completed " + LevelManager.GetCurrentLevelName());
         levelCompleted = true;
-        
+        completedAtTime = Time.time;
+
         AudioManager.Instance.PlayAudio(Sound.PlayerWin);
         LevelManager.LevelCompleted();
         playerUIManager.levelWinScreen.SetActive(true);
@@ -58,5 +77,15 @@ public class GameManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(playerStartPosition, 0.5f);
+    }
+    public int GetTotalDeaths()
+    {
+        return totalDeaths;
+    }
+    public float GetPlayerLevelTime()
+    {
+        if (levelCompleted)
+            return completedAtTime - startTime;
+        return Time.time - startTime;
     }
 }

@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private MeshRenderer mr;
 
-    void Start()
-    {
-        // mr.material = skins[PlayerPrefs.GetInt("skinnumber", 0)];
-    }
+    // void Start()
+    // {
+    //     mr.material = skins[PlayerPrefs.GetInt("skinnumber", 0)];
+    // }
 
     void FixedUpdate()
     {
