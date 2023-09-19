@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Vector3 lastCheckPoint;
     private bool levelCompleted = false;
-    private PlayerUIManager playerUIManager;
+    public PlayerUIManager playerUIManager;
 
     private float startTime;
     private float completedAtTime;
