@@ -26,6 +26,7 @@ public class Diamond : MonoBehaviour
     }
     private void UseDiamond()
     {
+        AudioManager.Instance.PlayAudio(Sound.DiamondPick);
         DiamondManager.UseDiamond(this);
         DiamondManager.AddDiamonds(amount);
     }
