@@ -151,5 +151,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 6216593689715466305, guid: 6840e691b05742c4d86a251c8dba4dd5,
     type: 3}
-  explosionForce: 7
-  explosionRadius: 4

@@ -2,8 +2,9 @@
 
 public class Trap : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
     public void Playaudio()
     {
-        AudioManager.Instance.PlayAudio(Sound.Trap);
+        audioSource.Play();
     }
 }

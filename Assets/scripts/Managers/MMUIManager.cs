@@ -9,6 +9,7 @@ public class MMUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI diamondText;
     void Start()
     {
+        AudioManager.Instance.PlayAudio(Sound.LevelMusic);
         diamondText.SetText(DiamondManager.GetTotalDiamonds().ToString());
     }
     public void OpenTraining()

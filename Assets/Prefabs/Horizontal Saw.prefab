@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7637576965878158428}
   - component: {fileID: 692955480759238246}
-  - component: {fileID: 164718434312207338}
+  - component: {fileID: 62013242600761102}
   m_Layer: 0
   m_Name: Horizontal Saw
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &164718434312207338
+--- !u!82 &62013242600761102
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2131bd9befa674d4ab1bb76d630aea5c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -159,8 +159,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 7
+  MinDistance: 1.4783373
+  MaxDistance: 11.478337
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0

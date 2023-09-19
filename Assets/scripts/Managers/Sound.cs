@@ -8,7 +8,6 @@ public enum Sound
     DiamondPick,
     TreeCrack,
     ButtonClick1,
-    Trap,
     CannonBulletSound,
     None,
 }
