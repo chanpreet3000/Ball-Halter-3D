@@ -81,4 +81,9 @@ public class LevelManager
         int index = GetCurrentLevelIndex();
         SetUnlockedLevelIndex(Mathf.Max(val, index + 1));
     }
+
+    public static void UnlockAllLevels()
+    {
+        SetUnlockedLevelIndex(levels.Length - 1);
+    }
 }
