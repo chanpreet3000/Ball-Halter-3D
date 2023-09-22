@@ -261,6 +261,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pause menu_0
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 126
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e109e9523101c294e8a2ce535d34c8ad
+      internalID: -449863098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -276,6 +297,8 @@ TextureImporter:
       jump: 2073588324
       menu: 619331191
       pause: -182092296
+      pause menu_0: -449863098
+      pause menu_1: 870433783
       restart: 1956538537
       resume: -1318499883
   mipmapLimitGroupName: 

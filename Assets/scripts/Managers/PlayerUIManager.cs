@@ -8,6 +8,7 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject loadingScreen;
     public GameObject levelIntroScreen;
     public GameObject levelWinScreen;
+    public GameObject playerMovementUI;
     public TextMeshProUGUI levelIntroText;
     public TextMeshProUGUI playerDeathCounterText;
     public TextMeshProUGUI playerLevelTimerText;
