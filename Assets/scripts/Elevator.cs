@@ -2,7 +2,6 @@
 public class Elevator : MonoBehaviour
 {
     [SerializeField] private float speed = 0.05f;
-    [SerializeField] private AnimationCurve animationCurve;
     [SerializeField] private Vector3 endPosition;
     private Vector3 startPosition;
     private float time = 0f;
