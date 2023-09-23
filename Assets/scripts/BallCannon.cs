@@ -15,29 +15,33 @@ public class BallCannon : MonoBehaviour
     {
         cameraObject.SetActive(false);
     }
-    public void Enter()
+    public void Enter(Transform player)
     {
+        player.gameObject.SetActive(false);
+        playerExitPoint = player.position;
         PlayerUIManager.Instance.playerMovementUI.SetActive(false);
         cameraObject.SetActive(true);
     }
 
-    public void Shoot()
+    public void Shoot(Transform player)
     {
+        player.gameObject.SetActive(true);
         PlayerUIManager.Instance.playerMovementUI.SetActive(true);
-        GameObject player = FindObjectOfType<PlayerMovement>().gameObject;
-        player.transform.position = shootPoint.position;
         player.GetComponent<Rigidbody>().AddForce(shootPoint.forward * force, ForceMode.Impulse);
         cameraObject.SetActive(false);
     }
 
-    public void Exit()
+    public void Exit(Transform player)
     {
+        player.gameObject.SetActive(true);
         PlayerUIManager.Instance.playerMovementUI.SetActive(true);
         cameraObject.SetActive(false);
+        player.position = playerExitPoint;
     }
 
-    public void Move(Vector2 Input)
+    public void Move(Transform player, Vector2 Input)
     {
+        player.position = shootPoint.position;
         currentXRot += Input.x * rotSpeed * Time.fixedDeltaTime;
         currentYRot += Input.y * rotSpeed * Time.fixedDeltaTime;
         rotationPoint.transform.eulerAngles = new Vector3(-currentYRot, currentXRot, 0);

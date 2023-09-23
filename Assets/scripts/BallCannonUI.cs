@@ -7,7 +7,7 @@ public class BallCannonUI : MonoBehaviour
     [SerializeField] private Joystick joystick;
     private Transform player;
 
-    private float radius = 4f;
+    private float radius = 2.5f;
     private BallCannon prevBallCannon = null;
     void Start()
     {
@@ -20,7 +20,7 @@ public class BallCannonUI : MonoBehaviour
     {
         if (prevBallCannon != null)
         {
-            prevBallCannon.Move(new Vector2(joystick.Horizontal, joystick.Vertical));
+            prevBallCannon.Move(player, new Vector2(joystick.Horizontal, joystick.Vertical));
             return;
         };
         bool f = false;
@@ -46,7 +46,7 @@ public class BallCannonUI : MonoBehaviour
                 prevBallCannon = ballCannon;
                 beforeUI.SetActive(false);
                 afterUI.SetActive(true);
-                ballCannon.Enter();
+                ballCannon.Enter(player);
                 break;
             }
         }
@@ -56,7 +56,7 @@ public class BallCannonUI : MonoBehaviour
     {
         beforeUI.SetActive(false);
         afterUI.SetActive(false);
-        prevBallCannon.Shoot();
+        prevBallCannon.Shoot(player);
 
         prevBallCannon = null;
     }
@@ -65,7 +65,7 @@ public class BallCannonUI : MonoBehaviour
     {
         beforeUI.SetActive(false);
         afterUI.SetActive(false);
-        prevBallCannon.Exit();
+        prevBallCannon.Exit(player);
 
         prevBallCannon = null;
     }
