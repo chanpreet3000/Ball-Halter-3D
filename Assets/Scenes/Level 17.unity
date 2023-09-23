@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
-  playerStartPosition: {x: 0, y: 1, z: 55.21}
+  playerStartPosition: {x: 0, y: 1, z: 0}
   playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
@@ -1725,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 928115146648012609, guid: 4c94fb70b86a4a94a9cde7478037b726,
         type: 3}
       propertyPath: amount
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4772133227308394674, guid: 4c94fb70b86a4a94a9cde7478037b726,
         type: 3}
