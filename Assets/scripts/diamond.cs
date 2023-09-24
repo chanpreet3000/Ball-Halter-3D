@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using UnityEngine;
 public class Diamond : MonoBehaviour
 {
     [SerializeField] private GameObject diamondMesh;
     [SerializeField] private int amount = 10;
-    private float localtime = 0f;
+    bool used = false;
     private void Awake()
     {
         if (DiamondManager.IsDiamondUsed(this))
@@ -12,16 +12,21 @@ public class Diamond : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        if (used) return;
         if (!other.CompareTag("Player")) return;
-        transform.position = Vector3.Lerp(transform.position, other.transform.position, localtime);
-        diamondMesh.transform.localScale = Vector3.Lerp(diamondMesh.transform.localScale, Vector3.zero, localtime);
-        localtime += Time.deltaTime;
-        if (localtime > 0.9f)
+        used = true;
+        UseDiamond();
+        StartCoroutine(AnimateDizziness(other.transform));
+    }
+    IEnumerator AnimateDizziness(Transform player)
+    {
+        for (float i = 0; i <= 1f; i += 1f * Time.deltaTime)
         {
-            UseDiamond();
-            Destroy(gameObject);
+            transform.position = Vector3.Lerp(transform.position, player.position, i);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, i);
+            yield return null;
         }
     }
     private void UseDiamond()
