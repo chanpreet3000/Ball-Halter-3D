@@ -659,6 +659,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
   playerStartPosition: {x: 0, y: 1.11, z: -0.9}
+  playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,6 +1015,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2011422754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2126367588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1738138286561691512, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_Name
+      value: Dizziness Power Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf4c0095c6647ff4cac184d065231a6f, type: 3}
 --- !u!1001 &2979902292402160287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1232,3 +1301,4 @@ SceneRoots:
   - {fileID: 1675445897}
   - {fileID: 1283418140}
   - {fileID: 1945487223}
+  - {fileID: 2126367588}
