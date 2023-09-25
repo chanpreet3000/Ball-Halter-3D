@@ -17,6 +17,9 @@ public class BallCannon : MonoBehaviour
     }
     public void Enter(Transform player)
     {
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         player.gameObject.SetActive(false);
         playerExitPoint = player.position;
         PlayerUIManager.Instance.playerMovementUI.SetActive(false);

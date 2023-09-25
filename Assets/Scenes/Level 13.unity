@@ -1391,6 +1391,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675445897}
     m_Modifications:
+    - target: {fileID: 1256496870074177091, guid: 6bc1045be292e3b41ac6a5116a776070,
+        type: 3}
+      propertyPath: magnetForce
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 2456700706062224544, guid: 6bc1045be292e3b41ac6a5116a776070,
         type: 3}
       propertyPath: m_Name
@@ -2644,7 +2649,7 @@ PrefabInstance:
     - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
         type: 3}
@@ -2654,7 +2659,7 @@ PrefabInstance:
     - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.75
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4919148798676745811, guid: bf4c0095c6647ff4cac184d065231a6f,
         type: 3}
@@ -2728,7 +2733,7 @@ PrefabInstance:
     - target: {fileID: 4574174141637667501, guid: aaaf74c728b1f9d44b107c1819057c57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4574174141637667501, guid: aaaf74c728b1f9d44b107c1819057c57,
         type: 3}

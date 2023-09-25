@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,11 +5,9 @@ public class MMUIManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject levelSelectUI;
-    [SerializeField] private TextMeshProUGUI diamondText;
     void Start()
     {
         AudioManager.Instance.PlayAudio(Sound.LevelMusic);
-        diamondText.SetText(DiamondManager.GetTotalDiamonds().ToString());
     }
     public void OpenTraining()
     {

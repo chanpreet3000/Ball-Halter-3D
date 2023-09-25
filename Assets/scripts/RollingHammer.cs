@@ -12,6 +12,6 @@ public class RollingHammer : MonoBehaviour
     {
         localTime += speed * Time.fixedDeltaTime;
         float val = Mathf.Sin(localTime) * maxAngle;
-        rotationPoint.eulerAngles = rotationAxis * val;
+        rotationPoint.localEulerAngles = rotationAxis * val;
     }
 }

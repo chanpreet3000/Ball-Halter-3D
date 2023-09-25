@@ -369,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 1168013283807603888, guid: 87d45447d8a33e14b8c65c0362da41fb,
         type: 3}
       propertyPath: endPosition.x
-      value: 16.2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1168013283807603888, guid: 87d45447d8a33e14b8c65c0362da41fb,
         type: 3}
@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 4203790765426103971, guid: 87d45447d8a33e14b8c65c0362da41fb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4203790765426103971, guid: 87d45447d8a33e14b8c65c0362da41fb,
         type: 3}
@@ -830,7 +830,7 @@ PrefabInstance:
     - target: {fileID: 8653737891900289910, guid: 610027ace24d2f542a5b4808535b410c,
         type: 3}
       propertyPath: force
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
-  playerStartPosition: {x: 0, y: 1.04, z: -0.69}
+  playerStartPosition: {x: 0, y: 1, z: -0.6}
   playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
