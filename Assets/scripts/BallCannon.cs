@@ -5,7 +5,7 @@ public class BallCannon : MonoBehaviour
     [SerializeField] private GameObject cameraObject;
     [SerializeField] private GameObject rotationPoint;
     [SerializeField] private Transform shootPoint;
-    private Vector3 playerExitPoint;
+    [SerializeField] private Vector3 playerExitPoint;
     [SerializeField] private float force;
     [SerializeField] private float rotSpeed;
 
@@ -21,7 +21,6 @@ public class BallCannon : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         player.gameObject.SetActive(false);
-        playerExitPoint = player.position;
         PlayerUIManager.Instance.playerMovementUI.SetActive(false);
         cameraObject.SetActive(true);
     }
@@ -49,5 +48,11 @@ public class BallCannon : MonoBehaviour
         currentXRot += Input.x * rotSpeed * Time.fixedDeltaTime;
         currentYRot += Input.y * rotSpeed * Time.fixedDeltaTime;
         rotationPoint.transform.eulerAngles = new Vector3(-currentYRot, currentXRot, 0);
+    }
+
+      private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(playerExitPoint, 0.5f);
     }
 }

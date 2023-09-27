@@ -933,6 +933,21 @@ PrefabInstance:
       propertyPath: force
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 1092313242723273252, guid: 8f90ebaf675f31e498718d1a8ca05681,
+        type: 3}
+      propertyPath: playerExitPoint.x
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092313242723273252, guid: 8f90ebaf675f31e498718d1a8ca05681,
+        type: 3}
+      propertyPath: playerExitPoint.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092313242723273252, guid: 8f90ebaf675f31e498718d1a8ca05681,
+        type: 3}
+      propertyPath: playerExitPoint.z
+      value: 54.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7461586466036518717, guid: 8f90ebaf675f31e498718d1a8ca05681,
         type: 3}
       propertyPath: m_LocalPosition.x
