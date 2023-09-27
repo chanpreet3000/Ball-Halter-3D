@@ -289,6 +289,11 @@ PrefabInstance:
     - target: {fileID: 561323501404886460, guid: 455c81b472d586148b7aeb6dd346cf4e,
         type: 3}
       propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022285766945846494, guid: 455c81b472d586148b7aeb6dd346cf4e,
+        type: 3}
+      propertyPath: m_TagString
       value: PlayerHolder
       objectReference: {fileID: 0}
     - target: {fileID: 3674811969549801130, guid: 455c81b472d586148b7aeb6dd346cf4e,
