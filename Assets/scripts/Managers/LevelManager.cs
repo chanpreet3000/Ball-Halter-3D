@@ -3,12 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager
 {
-    public static string trainingSceneName = "Training";
-    public static string mainMenuSceneName = "Main Menu";
-    public static string[] levels = { "Level 1", "Level 2", "Level 3", "Level 4", "Level 5","Level 6","Level 7","Level 8","Level 9",
-    "Level 10", "Level 11", "Level 12", "Level 13", "Level 14", "Level 15", "Level 16", "Level 17", "Level 18", "Level 19", "Level 20"};
-
-    private static string UNLOCKED_LEVEL_INDEX = "UNLOCKED_LEVEL_INDEX";
+    public static readonly string trainingSceneName = "Training";
+    public static readonly string mainMenuSceneName = "Main Menu";
+    public static readonly string[] levels = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+     "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" };
+    private static readonly string UNLOCKED_LEVEL_INDEX = "UNLOCKED_LEVEL_INDEX";
 
     public static int GetUnlockedLevelIndex()
     {
@@ -24,20 +23,17 @@ public class LevelManager
         string levelName = SceneManager.GetActiveScene().name;
         if (levelName == trainingSceneName || levelName == mainMenuSceneName)
             return levelName;
-        for (int i = 0; i < levels.Length; i++)
-        {
-            if (levels[i] == levelName) return "Level " + (i + 1).ToString();
-        }
-        return "Add the level name to Level Manager";
+
+        int currentLevelIndex = GetCurrentLevelIndex();
+        if (currentLevelIndex == -1) return "Add the level name to Level Manager";
+        return "Level " + (currentLevelIndex + 1).ToString();
     }
 
     public static int GetCurrentLevelIndex()
     {
         string levelName = SceneManager.GetActiveScene().name;
         for (int i = 0; i < levels.Length; i++)
-        {
             if (levels[i] == levelName) return i;
-        }
         return -1;
     }
 
@@ -57,12 +53,14 @@ public class LevelManager
 
     public static void OpenNextLevel()
     {
+        // If Training open main menu
         if (GetCurrentLevelName() == trainingSceneName)
         {
             OpenMainMenu();
             return;
         }
 
+        // If Last level open main menu
         int index = GetCurrentLevelIndex();
         if (index == levels.Length - 1)
         {
@@ -70,7 +68,6 @@ public class LevelManager
             return;
         }
 
-        //
         OpenLevelFromIndex(index + 1);
     }
     public static void LevelCompleted()

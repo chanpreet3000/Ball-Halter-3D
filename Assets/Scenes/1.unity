@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28896147, g: 0.685567, b: 0.8515962, a: 1}
+  m_IndirectSpecularColor: {r: 0.28908706, g: 0.6858296, b: 0.8519157, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -527,6 +527,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
   playerStartPosition: {x: 0, y: 0.9, z: -0.95}
+  playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
   m_ObjectHideFlags: 0
@@ -700,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 2010603844401355212, guid: c64c39bb7be31cb4697062d1a7cef6aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.24999976
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2010603844401355212, guid: c64c39bb7be31cb4697062d1a7cef6aa,
         type: 3}
@@ -922,7 +923,7 @@ PrefabInstance:
     - target: {fileID: 2010603844401355212, guid: 720953ecd38a70b4cb5f8014dff26ce4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2010603844401355212, guid: 720953ecd38a70b4cb5f8014dff26ce4,
         type: 3}
