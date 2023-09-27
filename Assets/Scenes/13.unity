@@ -1394,7 +1394,7 @@ PrefabInstance:
     - target: {fileID: 1256496870074177091, guid: 6bc1045be292e3b41ac6a5116a776070,
         type: 3}
       propertyPath: magnetForce
-      value: 35
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2456700706062224544, guid: 6bc1045be292e3b41ac6a5116a776070,
         type: 3}

@@ -777,6 +777,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
   playerStartPosition: {x: 0, y: 0.9, z: -0.95}
+  playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
   m_ObjectHideFlags: 0

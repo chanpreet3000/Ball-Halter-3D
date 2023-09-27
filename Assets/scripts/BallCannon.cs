@@ -28,6 +28,7 @@ public class BallCannon : MonoBehaviour
 
     public void Shoot(Transform player)
     {
+        AudioManager.Instance.PlayAudio(Sound.BallCannon);
         player.gameObject.SetActive(true);
         PlayerUIManager.Instance.playerMovementUI.SetActive(true);
         player.GetComponent<Rigidbody>().AddForce(shootPoint.forward * force, ForceMode.Impulse);

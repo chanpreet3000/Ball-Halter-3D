@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAudioClipArray:
   - sound: 0
-    audioClip: {fileID: 8300000, guid: 9a70b6a90c6a68846835da1e5302fe77, type: 3}
+    audioClip: {fileID: 8300000, guid: 00ffaf03467c95f49861cc9c0004274e, type: 3}
     loop: 0
     volume: 0.8
   - sound: 1
@@ -85,3 +85,7 @@ MonoBehaviour:
     audioClip: {fileID: 0}
     loop: 0
     volume: 1
+  - sound: 10
+    audioClip: {fileID: 8300000, guid: b86f8522470f087438b58807e4801e63, type: 3}
+    loop: 0
+    volume: 0.7

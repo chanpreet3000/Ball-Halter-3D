@@ -323,6 +323,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 4992538099154395572, guid: 92cec886e5bf44749be7ce460efcd27c,
     type: 3}
   playerStartPosition: {x: 0, y: 0.9, z: -0.95}
+  playerUIManager: {fileID: 0}
 --- !u!4 &1283418140
 Transform:
   m_ObjectHideFlags: 0
@@ -958,7 +959,7 @@ PrefabInstance:
     - target: {fileID: 7637576965878158428, guid: dfd3af71dc2462943a1f0861c5c7c2a0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710576
+      value: 0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: 7637576965878158428, guid: dfd3af71dc2462943a1f0861c5c7c2a0,
         type: 3}
@@ -973,7 +974,7 @@ PrefabInstance:
     - target: {fileID: 7637576965878158428, guid: dfd3af71dc2462943a1f0861c5c7c2a0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90.00001
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7637576965878158428, guid: dfd3af71dc2462943a1f0861c5c7c2a0,
         type: 3}

@@ -10,4 +10,5 @@ public enum Sound
     ButtonClick1,
     CannonBulletSound,
     None,
+    BallCannon,
 }
