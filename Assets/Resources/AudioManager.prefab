@@ -50,9 +50,9 @@ MonoBehaviour:
     loop: 0
     volume: 0.8
   - sound: 1
-    audioClip: {fileID: 8300000, guid: fed42e81dfa96474785677e930b63c1e, type: 3}
+    audioClip: {fileID: 8300000, guid: ff8dc276522714a4d840c182a0560a67, type: 3}
     loop: 1
-    volume: 0.4
+    volume: 0.6
   - sound: 2
     audioClip: {fileID: 8300000, guid: 0e8e3bfa6da8a5146809a35f91610a0a, type: 3}
     loop: 0

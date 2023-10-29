@@ -15,10 +15,7 @@ public class CameraMovement : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = Vector3.SmoothDamp(transform.position, player.position, ref velocity, followSmoothness);
-
-
         yAngle += joystick.Horizontal * rotateSpeed * Time.deltaTime;
-
         var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, yAngle, transform.eulerAngles.z);
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * rotateSmoothness);
     }

@@ -40,10 +40,14 @@ public class AudioManager : MonoBehaviour
         audiosource.Play();
         //
         DontDestroyOnLoad(soundGameObject);
-        Destroy(soundGameObject, audioClip.length);
+        if (!audiosource.loop)
+        {
+            Destroy(soundGameObject, audioClip.length);
+        }
     }
-    public void PlayLevelAudio(){
-        if(levelMusicStarted)return;
+    public void PlayLevelAudio()
+    {
+        if (levelMusicStarted) return;
         levelMusicStarted = true;
         PlayAudio(Sound.LevelMusic);
     }
